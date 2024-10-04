@@ -1,5 +1,39 @@
 {
-  "projects": [],
+  "projects": [
+    {
+      "id": "367d",
+      "name": "Criação de pipeline para publicação em PRD",
+      "budget": "3000",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "6ea4",
+      "name": "Criação de pipeline para publicação em PRD",
+      "budget": "3000",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "d660",
+      "name": "Desenvolvimento de aplicativo",
+      "budget": "40000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": []
+    }
+  ],
   "categories": [
     {
       "id": 1,
