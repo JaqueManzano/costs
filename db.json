@@ -3,13 +3,26 @@
     {
       "id": "367d",
       "name": "Criação de pipeline DEV",
-      "budget": "3000",
+      "budget": "500",
       "category": {
         "id": "1",
         "name": "Infra"
       },
-      "cost": 0,
-      "services": []
+      "cost": 200,
+      "services": [
+        {
+          "name": "Teste",
+          "cost": "100",
+          "description": "Descrição",
+          "id": "b974421e-83cb-4fe8-8d85-2d86f20a4196"
+        },
+        {
+          "name": "Teste",
+          "cost": "100",
+          "description": "Descrição",
+          "id": "8aec483b-f331-4b13-a26f-583506f2b484"
+        }
+      ]
     },
     {
       "id": "6ea4",
@@ -36,7 +49,7 @@
     {
       "id": "85be",
       "name": "Desenvolvimento Novo Projeto Web",
-      "budget": "10000",
+      "budget": "19000",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
