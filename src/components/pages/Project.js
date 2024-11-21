@@ -1,4 +1,4 @@
-import { parse, v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Loading from '../layout/Loading';
@@ -64,6 +64,7 @@ function Project() {
         .then((resp) => resp.json())
         .then((data) => {
             setShowProjectForm(false)
+            setMessage('Serviço adicionado com sucesso!')
         })
         .catch(error => console.log(error))
     }
@@ -76,8 +77,26 @@ function Project() {
         setShowServiceForm(!showServiceForm);
     }
 
-    function removeService(){
+    function removeService(id, cost){
+        const servicesUpdate = services.filter((service) => service.id !== id);
+        const projectUpdate = project;
+        projectUpdate.services = servicesUpdate;
+        projectUpdate.cost = parseFloat(projectUpdate.cost) - parseFloat(cost);
 
+        fetch(`http://localhost:5000/projects/${projectUpdate.id}`,{
+            method: 'PATCH',
+            headers:{
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(projectUpdate)
+        })
+        .then((resp) => resp.json())
+        .then((data) => {
+            setProject(projectUpdate);
+            setServices(servicesUpdate);   
+            setMessage('Serviço removido com sucesso!')
+        })
+        .catch(error => console.log(error))
     }
 
     function editPost(project){

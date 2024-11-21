@@ -54,15 +54,8 @@
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 1000,
-      "services": [
-        {
-          "name": "Serviço",
-          "cost": "1000",
-          "description": "Descrição",
-          "id": "a50c6f4d-ace2-48c4-ba50-5feb16766a9d"
-        }
-      ]
+      "cost": -4700,
+      "services": []
     }
   ],
   "categories": [
